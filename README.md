@@ -15,7 +15,7 @@ To run this application, you need the following dependencies:
 - Jinja2
 - Uvicorn
 - pydantic
-- scikit-learn (or whichever library you're using for predictions)
+- scikit-learn
 
 You can install all dependencies using the following command:
 
@@ -69,7 +69,7 @@ Here's an example of how to use the web interface:
 3. The application will display the predicted species along with the probabilities of each species.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+This project is licensed under the Apache License 2.0, See the LICENSE file for more details.
 
 ## Acknowledgments
 - This project is built using [FastAPI](https://fastapi.tiangolo.com/).
