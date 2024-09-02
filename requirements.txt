@@ -1,4 +1,4 @@
-# Python Version 3.12.4
+# Python version 3.12.4
 annotated-types==0.7.0
 click==8.1.7
 fastapi==0.112.2
