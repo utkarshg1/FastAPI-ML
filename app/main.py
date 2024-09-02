@@ -22,9 +22,7 @@ async def predict(
 ):
     # Predict results with probabilities
     iris_data = get_input_data(sepal_length, sepal_width, petal_length, petal_width)
-    print(iris_data)
     results = predict_results(sepal_length, sepal_width, petal_length, petal_width)
-    print(results)
     label = results.prediction
     probs = results.probability
 
