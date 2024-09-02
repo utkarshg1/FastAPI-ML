@@ -4,7 +4,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI()
-templates = Jinja2Templates(directory="./templates")
+templates = Jinja2Templates(directory="app/templates")
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -15,14 +15,16 @@ async def index(request: Request):
 @app.post("/predict", response_class=HTMLResponse)
 async def predict(
     request: Request,
-    sepal_length: float = Form(),
-    sepal_width: float = Form(),
-    petal_length: float = Form(),
-    petal_width: float = Form(),
+    sepal_length: float = Form(...),
+    sepal_width: float = Form(...),
+    petal_length: float = Form(...),
+    petal_width: float = Form(...),
 ):
     # Predict results with probabilities
     iris_data = get_input_data(sepal_length, sepal_width, petal_length, petal_width)
+    print(iris_data)
     results = predict_results(sepal_length, sepal_width, petal_length, petal_width)
+    print(results)
     label = results.prediction
     probs = results.probability
 
@@ -34,5 +36,5 @@ async def predict(
             "prediction": label,
             "probabilities": probs,
             "iris_data": iris_data,
-        },
+        }
     )

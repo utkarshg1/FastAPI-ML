@@ -28,7 +28,7 @@ def train_and_save_model():
     pipe.fit(xtrain, ytrain)
 
     # Save model as joblib
-    path = "./artifacts/iris_model.joblib"
+    path = "app/artifacts/iris_model.joblib"
     joblib.dump(pipe, path)
     print(f"Model saved successfully in path : {path}")
 
@@ -38,7 +38,7 @@ def get_classes() -> list[str]:
     return iris.target_names
 
 
-def load_model(path: str = "./artifacts/iris_model.joblib"):
+def load_model(path: str = "app/artifacts/iris_model.joblib"):
     model = joblib.load(path)
     return model
 
