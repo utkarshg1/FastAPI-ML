@@ -1,4 +1,4 @@
-# Python version 3.12.4
+# Python Version 3.12.4
 annotated-types==0.7.0
 click==8.1.7
 fastapi==0.112.2
@@ -6,6 +6,7 @@ joblib==1.4.2
 numpy==2.1.0
 pydantic==2.8.2
 pydantic_core==2.20.1
+python-multipart==0.0.9
 scikit-learn==1.5.1
 scipy==1.14.1
 starlette==0.38.4
