@@ -1,5 +1,12 @@
-fastapi
-uvicorn
-jinja2
-joblib
-scikit-learn
+annotated-types==0.7.0
+click==8.1.7
+fastapi==0.112.2
+joblib==1.4.2
+numpy==2.1.0
+pydantic==2.8.2
+pydantic_core==2.20.1
+scikit-learn==1.5.1
+scipy==1.14.1
+starlette==0.38.4
+threadpoolctl==3.5.0
+uvicorn==0.30.6

@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Gitpod
+.gitpod.yml
+
 # C extensions
 *.so
 
