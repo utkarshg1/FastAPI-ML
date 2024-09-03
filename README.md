@@ -44,7 +44,7 @@ pip install -r requirements.txt
 3. Run the application:
 
    ```bash
-   uvicorn app.main:app --reload
+   python main.py
    ```
 
 4. Open your web browser and go to `http://localhost:8000`. You will see a form where you can input the sepal and petal measurements for the Iris flower.
