@@ -48,6 +48,6 @@ if __name__ == "__main__":
         host="0.0.0.0",           # Bind to all interfaces
         port=8000,                # Port number for the application
         log_level="info",         # Log level
-        workers=4,                # Number of workers 
+        workers=1,                # Number of workers 
         lifespan="on"
     )
