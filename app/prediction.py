@@ -25,7 +25,7 @@ def predict_results(
         )
 
         # Load model
-        model = load_model()
+        model = load_model("app/artifacts/iris_model.joblib")
 
         # Perform predictions
         data = [
