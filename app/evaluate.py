@@ -14,7 +14,13 @@ def get_test_report():
     report = classification_report(ytest, ypred_test)
     print(report)
     cv_scores = cross_val_score(model, xtrain, ytrain, cv=5, scoring="f1_macro")
-    print(f"\n5 fold Cross validated average F1 Macro is {cv_scores.mean():.4f}")
+    cv_result = f"\n5 fold Cross validated average F1 Macro is {cv_scores.mean():.4f}"
+    print(cv_result)
+    
+    # Save result in artifacts/report.txt
+    with open("artifacts/report.txt", "w") as f:
+        f.write(report)
+        f.write(cv_result)
 
 
 if __name__ == "__main__":
