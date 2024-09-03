@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Request, Form
-from .prediction import get_input_data, predict_results
+from app.prediction import get_input_data, predict_results
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+import uvicorn
 
 app = FastAPI()
 templates = Jinja2Templates(directory="app/templates")
@@ -34,5 +35,9 @@ async def predict(
             "prediction": label,
             "probabilities": probs,
             "iris_data": iris_data,
-        }
+        },
     )
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
