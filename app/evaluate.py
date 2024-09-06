@@ -9,7 +9,7 @@ def get_test_report():
     xtrain, xtest, ytrain, ytest = train_test_split(
         iris.data, iris.target, test_size=0.33, random_state=42
     )
-    model = load_model()
+    model = load_model("app/artifacts/iris_model.joblib")
     ypred_test = model.predict(xtest)
     report = classification_report(ytest, ypred_test)
     print(report)
@@ -18,7 +18,7 @@ def get_test_report():
     print(cv_result)
     
     # Save result in artifacts/report.txt
-    with open("artifacts/report.txt", "w") as f:
+    with open("app/artifacts/report.txt", "w") as f:
         f.write(report)
         f.write(cv_result)
 
