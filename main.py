@@ -12,7 +12,7 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
-    return templates.TemplateResponse("iris_prediction.html", {"request": request})
+    return templates.TemplateResponse(request, "iris_prediction.html", {"request": request})
 
 
 @app.post("/predict", response_class=HTMLResponse)
@@ -31,6 +31,7 @@ async def predict(
 
     # Return results
     return templates.TemplateResponse(
+        request,
         "iris_prediction.html",
         {
             "request": request,
