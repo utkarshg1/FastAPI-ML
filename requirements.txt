@@ -8,3 +8,4 @@ fastapi
 pydantic
 python-multipart
 uvicorn
+httpx

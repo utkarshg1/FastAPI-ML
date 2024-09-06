@@ -38,6 +38,7 @@ jobs:
             pip install pydantic
             pip install python-multipart
             pip install uvicorn
+            pip install httpx
 
         - name: Run tests
           run: |
