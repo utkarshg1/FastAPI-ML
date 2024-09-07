@@ -47,6 +47,12 @@ pip install -r requirements.txt
    source env/bin/activate # env\Script\activate.bat for Windows machine
    ```
 
+5. Upgrade pip
+
+   ```bash
+   python -m pip install --upgrade pip
+   ```
+
 4. Install dependencies:
 
    ```bash
