@@ -31,8 +31,8 @@ pip install -r requirements.txt
 1. Clone the repository:
 
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-directory>
+   git clone https://github.com/utkarshg1/FastAPI-ML.git
+   cd FastAPI-ML
    ```
 
 2. Set Up Python Virtual environment
