@@ -35,21 +35,33 @@ pip install -r requirements.txt
    cd <your-repo-directory>
    ```
 
-2. Install dependencies:
+2. Set Up Python Virtual environment
+
+   ```bash
+   python -m venv env
+   ```
+
+3. Activaate virtual environment
+
+   ```bash
+   source env/bin/activate # env\Script\activate.bat for Windows machine
+   ```
+
+4. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+5. Run the application:
 
    ```bash
    python main.py
    ```
 
-4. Open your web browser and go to `http://localhost:8000`. You will see a form where you can input the sepal and petal measurements for the Iris flower.
+6. Open your web browser and go to `http://localhost:8000`. You will see a form where you can input the sepal and petal measurements for the Iris flower.
 
-5. After submitting the form, the application will display the predicted species along with the probabilities for each species.
+7. After submitting the form, the application will display the predicted species along with the probabilities for each species.
 
 ## Endpoints
 ### `GET /`
